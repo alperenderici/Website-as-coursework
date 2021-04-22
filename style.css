@@ -1,0 +1,515 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 6px;
+}
+
+body {
+    font-family: 'Noto+Sans+JP', 'Raleway';
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: Raleway;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+section {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+
+.btn-large {
+    font-size: 2rem;
+    padding: 2.4rem 1.6rem;
+}
+
+.btn {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid yellow;
+    color: yellow;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn-social {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.btn-outline {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+}
+
+.btn:hover {
+    color: black;
+    background-color: #ffdb58;
+}
+
+.btn-primary {
+    background-color: yellow;
+    color: black;
+}
+
+.btn-primary:hover {
+    background-color: #ffdb58;
+    border: #ffdb58;
+}
+
+
+.img-banner {
+    max-width: 100%;
+    margin: auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    width: 100%;
+    padding: 1rem;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    html {
+        font-size: 7px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    html {
+        font-size: 8px;
+    }
+
+    .col {
+        width: 50%
+    }
+
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    html {
+        font-size: 9px;
+    }
+
+    .col {
+        width: 20%;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    html {
+        font-size: 10px;
+    }
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/*navbar*/
+nav {
+    width: 100%;
+    font-family: Raleway;
+    background-color: skyblue;
+    color: #fff;
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    position: fixed;
+    z-index: 500;
+}
+
+#logo-box {
+    float: left;
+    padding-top: .5rem;
+}
+
+#logo-box .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.2rem;
+    padding-left: .5rem;
+}
+
+#nav-links {
+    float: right;
+}
+
+#nav-links .nav-item {
+    float: left;
+    margin: .5rem;
+}
+
+#nav-links .nav-link {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+    padding: 1.8rem;
+    letter-spacing: .2rem;
+    transition: color .3s;
+}
+
+#nav-links .nav-link:hover {
+    color: blue;
+}
+
+#nav-links .nav-icon {
+    display: none;
+}
+
+@media(max-width: 992px) {
+    #logo-box {
+        float: none;
+        text-align: left;
+    }
+
+    #nav-links {
+        float: none;
+    }
+
+    #nav-links.responsive li:not(first-child) {
+        display: none;
+    }
+
+    #nav-links .nav-link {
+        font-size: 2rem;
+        padding-left: 0;
+    }
+
+    #nav-links .nav-item {
+        float: none;
+        text-align: left;
+    }
+
+    nav-links .nav-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 3rem;
+    }
+}
+
+
+
+/*Header*/
+header {
+    background-color: azure;
+    padding-top: calc(104px + 10rem);
+    padding-bottom: 104px;
+    text-align: center;
+}
+
+header h1 {
+    color: yellow;
+    text-shadow: 2px 2px 5px black;
+    font-size: 7.6rem;
+}
+
+.line {
+    border: none;
+    border-top: .4rem solid skyblue;
+    max-width: 100rem;
+    margin: 3rem auto;
+    height: 0;
+}
+
+/*Team*/
+#team {
+    background-color: #ffdb58;
+}
+
+#team h2 {
+    font-size: 4.8rem;
+    color: skyblue;
+}
+
+.col-footer {
+    float: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.team-item {
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+.team-item img {
+    display: block;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: skyblue;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.img-overlay .icon {
+    color: black;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.team-item:hover .img-overlay {
+    opacity: 0.8;
+}
+
+/*competition*/
+#competition {
+    background-color: white;
+    color: black;
+}
+
+#competition h2 {
+    font-size: 4.8rem;
+}
+
+/*history*/
+#history {
+    background-color: black;
+    color: #fff;
+}
+
+#history h2 {
+    font-size: 4.8rem;
+}
+
+#history-text {
+    text-align: left;
+}
+
+#history-text .text {
+    font-size: 2rem;
+}
+
+@media(min-width: 992px) {
+    #history-text .left {
+        float: left;
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 210px;
+    }
+
+    #history-text .right {
+        float: right;
+        width: 50%;
+        padding-right: 210px;
+        padding-left: 10px;
+    }
+}
+
+
+
+#table {
+    font-family: Raleway;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table td,
+#table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#table tr:nth-child(even) {
+    background-color: azure;
+}
+
+#table tr:hover {
+    background-color: darkgray;
+}
+
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: azure;
+    color: blue;
+}
+
+#table h2 {
+    font-family: "Noto Sans JP"
+}
+
+#join-text {
+    text-align: center;
+    padding-right: 20rem;
+    padding-left: 20rem;
+    font-size: 2rem;
+}
+
+/*Contact*/
+
+#contact h2 {
+    font-size: 4.8rem;
+}
+
+#contact-form {
+    width: 70%;
+    margin: 0 auto;
+    border: yellow;
+}
+
+.form-group {
+    border-bottom: 1px solid #ffdb58;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    border: none;
+    width: 100%;
+    display: block;
+    font-size: 2.4rem;
+}
+
+.form-group input:focus {
+    outline: 0;
+}
+
+#sponsors {
+    background-color: #ffdb58;
+    text-align: center;
+    color: black;
+    image-orientation: center;
+}
+
+#sponsors h2 {
+    font-size: 4.8rem;
+}
+
+footer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer .col {}
+
+footer h4 {
+    font-size: 2.4rem;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.copyright {
+    background-color: skyblue;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    color: white;
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: blue;
+    background-color: white;
+    align-content: center;
+    border-radius: 30%;
+}
+
+.dropdown:hover .dropdown-content {
+    color: blue;
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: blue;
+    background-color: blue;
+}
